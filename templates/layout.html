@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoNautic App</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<header class="wrapper">
+    <h3>
+        <a href="{% url 'articles:list' %}">
+            <img src="{% static 'logo.jpg' %}" alt="" width="80">
+        </a>
+    </h3>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">About</a>
+            </li>
+            <li>
+                <a href="{% url 'articles:list' %}">Article</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'accounts:signup' %}">Register</a>
+                </li>
+                <li>
+                    <a href="{% url 'articles:article_create' %}">Create Article</a>
+                </li>
+                <li>
+                    <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="">Logout</button>
+                    </form>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'accounts:signin' %}">Login</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+<div class="wrapper">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    background-color: #0f121f;
+    background-image: url("/static/stars.png");
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+body * {
+    font-family: Calibri;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div h1 {
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 20px 0;
+}
+
+nav {
+    justify-self: end;
+}
+
+nav li {
+    display: inline-block;
+    margin: 18px;
+}
+
+nav li button {
+    background: none;
+    color: #ffffff;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.article {
+    border: 1px solid #D1B595;
+    position: relative;
+    padding: 10px 10px 40px;
+}
+
+.article h2 {
+    font-size: 1.2em;
+}
+
+.article .author {
+    padding: 10px;
+    background: #d1b595;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #016;
+}
+
+.article-detail .article {
+    padding: 0
+}
+
+.article-detail .article img {
+    max-width: 100%;
+}
+
+.article-detail .article h2 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+.article-detail .article p {
+    text-align: center;
+}
+
+.site-form {
+    margin-top: 60px;
+    border: 1px solid #d1b595;
+    padding: 20px;
+}
+
+.site-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.site-form input, .site-form textarea {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+}
+
+.site-form input[type="submit"] {
+    border: 1px solid #bbbb
+    border-radius: 4px;
+    background: #00dba0;
+    width: 20%;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 10px 0;
+
+}
+
+a.highlight {
+    border: 1px solid #D1B595;
+    padding: 10px;
+    border-radius: 4px;
+    background: #FFFEE5;
+    color: #00012C;
+}
+
+.helptext, .helptext ul {
+    margin: 0 auto 20px;
+    color: #bbbb;
+    font-size: 0.9em;
+}
+
+.errorlist li {
+    list-style-type: none;
+    border: 1px solid #ff5722;
+    color: #ff5722;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.errorlist {
+    padding: 0px
+}
